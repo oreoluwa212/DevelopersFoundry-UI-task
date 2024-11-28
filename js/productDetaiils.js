@@ -7,29 +7,23 @@ class ProductDetailsManager {
 
   async init() {
     try {
-      // Get product ID from URL
       const urlParams = new URLSearchParams(window.location.search);
       const productId = urlParams.get("id");
 
-      // Check if product ID is valid
       if (!productId || productId === "undefined") {
         throw new Error("No valid product ID provided in the URL.");
       }
 
       console.log("Fetching product with ID:", productId);
 
-      // Fetch product details
       const product = await this.productService.getProductById(productId);
 
-      // Log the product details for debugging
       console.log("Product details:", product);
 
-      // Populate page with product details
       this.renderProductDetails(product);
     } catch (error) {
       console.error("Error loading product details:", error);
 
-      // Display error message to user
       const errorContainer = document.getElementById("error-container");
       if (errorContainer) {
         errorContainer.textContent =
@@ -49,7 +43,6 @@ class ProductDetailsManager {
       rating: document.getElementById("product-rating"),
     };
 
-    // Safely update elements
     if (elements.title) elements.title.textContent = product.title;
     if (elements.description)
       elements.description.textContent = product.description;

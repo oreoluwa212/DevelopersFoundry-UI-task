@@ -3,7 +3,7 @@ import { ProductService } from "./product.js";
 class DOMManager {
   static createEventCard({ id, image, title, date, description }) {
     const col = document.createElement("div");
-    col.className = "col-md-4 mb-4"; // Bootstrap responsive column
+    col.className = "col-md-4 mb-4";
 
     const card = document.createElement("div");
     card.className = "event_card card h-100 shadow-sm";
@@ -48,7 +48,7 @@ class DOMManager {
   }
 
   static renderCards(container, cardsData) {
-    container.innerHTML = ""; // Clear existing content
+    container.innerHTML = "";
     cardsData.forEach((cardData) => {
       const card = DOMManager.createEventCard(cardData);
       container.appendChild(card);

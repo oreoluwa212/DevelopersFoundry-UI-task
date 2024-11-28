@@ -1,7 +1,7 @@
 import { ProductService } from "./product.js";
 
 class DOMManager {
-  static createEventCard({ image, title, date, description }) {
+  static createEventCard({ id, image, title, date, description }) {
     const card = document.createElement("div");
     card.className = "event_card";
 
@@ -29,12 +29,14 @@ class DOMManager {
 
     const button = document.createElement("button");
     button.innerHTML = `View details <i class="bi bi-arrow-up-right"></i>`;
+    button.addEventListener("click", () => {
+      window.location.href = `html/productdets.html?id=${id}`;
+    });
     content.appendChild(button);
 
     card.appendChild(content);
     return card;
   }
-
   static renderCards(container, cardsData) {
     console.log("container:", container);
     cardsData.forEach((cardData) => {
@@ -49,7 +51,7 @@ class DOMManager {
   const productService = new ProductService();
   const products = await productService.getProducts();
 
-  const productsData = products.slice(0, 3).map((product) => ({
+  const productsData = products.map((product) => ({
     image: product.image,
     title: product.title,
     date: "Available Now",

@@ -10,167 +10,54 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
   </head>
-
   <body>
     <div class="container">
       <nav>
         <div class="nav_div">
-          <p class="logo">rendezvous</p>
+          <p class="logo">MyLogo</p>
           <div class="nav_links">
-            <a href="#">Discover</a>
-            <a href="#">About us</a>
-            <a href="#">FAQs</a>
-            <a href="#">Contact us</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
           </div>
           <div class="nav_buttons">
-            <p>Log in</p>
-            <button class="sign_up">Sign up</button>
+            <p>Login</p>
+            <button class="sign_up">Sign Up</button>
           </div>
         </div>
       </nav>
-      <main>
-        <div class="main_div">
-          <div class="shadow_cover"></div>
-          <div class="main_div_content">
-            <p>
-              Ready to Rock? Discover the Hottest Events Here - Your Calendar's
-              New Best Friend!
-            </p>
-            <div class="filter_options">
-              <div class="input_div">
-                <i class="bi bi-search"></i>
-                <input name="Search" placeholder="Search for an event" />
-              </div>
-              <div class="categories_section">
-                <select>
-                  <option selected value="categories">Categories</option>
-                </select>
-                <button class="search">Search</button>
-              </div>
+
+      <div class="main_div">
+        <div class="shadow_cover"></div>
+        <div class="main_div_content">
+          <p>Welcome to our event platform!</p>
+          <div class="filter_options">
+            <div class="input_div">
+              <i class="bi bi-search"></i>
+              <input type="text" placeholder="Search..." />
+            </div>
+            <div class="categories_section">
+              <select>
+                <option>Category 1</option>
+                <option>Category 2</option>
+              </select>
+              <button class="search">Filter</button>
             </div>
           </div>
         </div>
-      </main>
+      </div>
+
       <section>
-        <div class="each_event">
+        <div class="events">
           <div class="event_header">
-            <p>Trending events</p>
-            <a href="#"
-              >View all trending events <i class="bi bi-arrow-up-right"></i
-            ></a>
+            <p>Upcoming Events</p>
+            <a href="#">View All <i class="bi bi-arrow-up-right"></i></a>
           </div>
-          <div class="each_event" id="eventId"></div>
+          <div id="eventId" class="each_event"></div>
         </div>
       </section>
     </div>
-    <script src="js/elementManipulation.js" defer type="module"></script>
+
+    <script type="module" src="js/elementManipulation.js"></script>
   </body>
 </html>
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UI Task</title>
-    <link rel="stylesheet" href="./styles.css"></link>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-</head>
-
-<body>
-    <div class="container">
-        <nav>
-            <div class="nav_div">
-                <p class="logo">rendezvous</p>
-                <div class="nav_links">
-                    <a href="#">Discover</a>
-                    <a href="#">About us</a>
-                    <a href="#">FAQs</a>
-                    <a href="#">Contact us</a>
-                </div>
-                <div class="nav_buttons">
-                    <p>Log in</p>
-                    <button class="sign_up">Sign up</button>
-                </div>
-            </div>
-        </nav>
-        <main>
-            <div class="main_div">
-                <div class="shadow_cover"></div>
-                <div class="main_div_content">
-                    <p>Ready to Rock? Didcover the Hottest Events Here - Your Calendar's New Best Friend!</p>
-                    <div class="filter_options">
-                        <div class="input_div">
-                            <i class="bi bi-search"></i>
-                            <input class="" name="Search" placeholder="Search for an event" />
-                        </div>
-                        <div class="categories_section">
-                            <select>
-                                <option selected value="categories">Categories</option>
-                            </select>
-                            <button class="search">Search</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <section>
-            <div class="events">
-                <div class="event_header">
-                    <p>Trending events</p>
-                    <a href="#">View all trending events <i class="bi bi-arrow-up-right"></i></a>
-                </div>
-                <div class="each_event">
-                    <div class="event_card">
-                        <img src="./images/event_1.jpg" alt="tech4dev" />
-                        <div class="event_content">
-                            <p class="event_title">ISWIS Live show</p>
-                            <p class="event_date">Sun, Oct 3rd <span class="dot">•</span> 6pm</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, provident quam, maxime
-                                perspiciatis dolorum, ullam autem laborum officiis perferendis quia doloremque sapiente
-                                suscipit nemo accusamus similique saepe corporis impedit? Incidunt?
-                            </p>
-                            <button>
-                                View details
-                                <i class="bi bi-arrow-up-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="event_card">
-                        <img src="./images/event_2.jpg" alt="tech4dev" />
-                        <div class="event_content">
-                            <p class="event_title">ISWIS Live show</p>
-                            <p class="event_date">Sun, Oct 3rd <span class="dot">•</span> 6pm</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, provident quam, maxime
-                                perspiciatis dolorum, ullam autem laborum officiis perferendis quia doloremque sapiente
-                                suscipit nemo accusamus similique saepe corporis impedit? Incidunt?
-                            </p>
-                            <button>
-                                View details
-                                <i class="bi bi-arrow-up-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="event_card">
-                        <img src="./images/event_3.jpg" alt="tech4dev" />
-                        <div class="event_content">
-                            <p class="event_title">ISWIS Live show</p>
-                            <p class="event_date">Sun, Oct 3rd <span class="dot">•</span> 6pm</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, provident quam, maxime
-                                perspiciatis dolorum, ullam autem laborum officiis perferendis quia doloremque sapiente
-                                suscipit nemo accusamus similique saepe corporis impedit? Incidunt?
-                            </p>
-                            <button>
-                                View details
-                                <i class="bi bi-arrow-up-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</body>
-<script src="js/index.js" defer type="module"></script>
-</html> -->
